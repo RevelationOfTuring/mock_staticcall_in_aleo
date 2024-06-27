@@ -11,7 +11,7 @@ contract StaticcallCaller {
         _staticcallTarget = IStaticcallTarget(staticallTargetAddr);
     }
 
-    function setFactorial(address key) external {
+    function setProduct(address key) external {
         map[key] = _staticcallTarget.getProductFromMap(key);
     }
 }

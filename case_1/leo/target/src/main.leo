@@ -4,7 +4,10 @@ program target.aleo {
     // build a mapping to hold the result of 'staticcall'
     mapping map_extra: address => u128;
 
-    async transition set_map(key: address, value: u128) -> Future {
+    async transition set_map(
+        public key: address,
+        public value: u128,
+    ) -> Future {
         return finalize_set_map(key, value);
     }
 
