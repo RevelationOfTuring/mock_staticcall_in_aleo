@@ -10,17 +10,8 @@ contract StaticcallTarget is IStaticcallTarget {
         map[key] = value;
     }
 
-    function getFactorialFromMap(address key) external view returns (uint) {
+    function getProductFromMap(address key) external view returns (uint) {
         uint value = map[key];
-        if (value == 0) {
-            return 1;
-        }
-
-        uint factorial = 1;
-        for (uint i = 2; i <= value; ++i) {
-            factorial *= i;
-        }
-
-        return factorial;
+        return value * (value + 1) * (value + 2);
     }
 }

@@ -2,5 +2,5 @@
 pragma solidity ^0.8.0;
 
 interface IStaticcallTarget {
-    function getFactorialFromMap(address key) external view returns (uint);
+    function getProductFromMap(address key) external view returns (uint);
 }

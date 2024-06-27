@@ -12,6 +12,6 @@ contract StaticcallCaller {
     }
 
     function setFactorial(address key) external {
-        map[key] = _staticcallTarget.getFactorialFromMap(key);
+        map[key] = _staticcallTarget.getProductFromMap(key);
     }
 }
